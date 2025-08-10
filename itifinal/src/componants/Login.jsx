@@ -15,7 +15,7 @@ export function Login() {
       return;
     }
 
-    // لو كل حاجة تمام نروح على الهوم
+
     navigate("/");
   };
 
@@ -72,3 +72,4 @@ export function Login() {
     </div>
   );
 }
+
