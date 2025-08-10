@@ -10,13 +10,12 @@ export function Signup() {
 
   const navigate = useNavigate();
 
-  // تحقق من شكل الإيميل
+  
   const validateEmail = (email) => /\S+@\S+\.\S+/.test(email);
 
-  // تحقق من اليوزر نيم (حروف فقط وطوله أكبر من أو يساوي 3)
+  
   const validateUsername = (name) => /^[A-Za-z]{3,}$/.test(name);
 
-  // تحقق من الباسوورد (حروف كبيرة وصغيرة + رقم + رمز)
   const validatePassword = (pass) =>
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$/.test(pass);
 
@@ -56,7 +55,6 @@ export function Signup() {
       >
         <h1>Create an account</h1>
 
-        {/* Username */}
         <div className="mt-3 mb-2">
           <input
             placeholder="User name"
@@ -67,7 +65,6 @@ export function Signup() {
           />
         </div>
 
-        {/* Email */}
         <div className="mb-3">
           <input
             placeholder="Email"
@@ -78,7 +75,6 @@ export function Signup() {
           />
         </div>
 
-        {/* Password */}
         <div className="mb-3">
           <input
             placeholder="Password"
@@ -87,12 +83,11 @@ export function Signup() {
             value={password}
             onChange={(e) => {
               setPassword(e.target.value);
-              setConfirmPassword(e.target.value); // تعبئة تلقائية
+              setConfirmPassword(e.target.value); 
             }}
           />
         </div>
 
-        {/* Confirm Password */}
         <div className="mb-3">
           <input
             placeholder="Confirm Password"
@@ -103,7 +98,6 @@ export function Signup() {
           />
         </div>
 
-        {/* Error message */}
         {error && <p className="text-danger">{error}</p>}
 
         <button className="bu" type="submit">
@@ -117,3 +111,4 @@ export function Signup() {
     </div>
   );
 }
+
